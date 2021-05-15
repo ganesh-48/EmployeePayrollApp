@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,8 +33,7 @@
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
             </div>
-        </form>
-    </div>
+        
 
     <!--*specify profile pic to the employee payroll app.
     * add the employee pictures in a employee payroll app using a radio button.-->
@@ -157,5 +157,32 @@
         </select>
       </div>
     </div>
+
+    <!--*Add Notes in employee payroll form.
+    *Add Buttons like cancle, reset and submit.
+  * Added a media query.-->
+    <div class="row-content">
+      <label class="label text" for="note">Note</label>
+      <textarea id="note" class="input" name="note" placeholder="" style="height:100px">
+      </textarea>
+      </div>
+      <div class="buttonParent">
+          <button type="cancle" class="button cancelButton">Cancel</button>
+          <div class="submit-reset">
+              <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+              <button type="reset" class="resetButton button">Reset</button>
+          </div>
+      </div>
+    </form>
+
+    <script>
+      const salary = document.querySelector('#salary');
+      const output = document.querySelector('.salary-output');
+      output.textContent = salary.value;
+      salary.addEventListener('input', function () {
+          output.textContent = salary.value;
+      });
+  </script>
+
   </body>
 </html>
